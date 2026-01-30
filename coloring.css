@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dominant-color: #1b2a49; /* Navy Blue (60%) */
+    --secondary-color: #d9c2a3; /* Beige (30%) */
+    --highlight-color: #d4af37; /* Gold (10%) */
+}
+
+/* Body */
+body {
+    text-align: center;
+    background-color: #f5f5f5;
+    color: var(--dominant-color);
+}
+
+/* Navbar */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dominant-color);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--highlight-color);
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color);
+}
+
+/* Welcome Section */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dominant-color);
+    color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between text and image */
+    max-width: 900px;
+    width: 90%;
+}
+/* Text Styling */
+.welcome-text {
+    margin-bottom: 20px; /* Space between text and image */
+}
+
+/* Image Styling */
+#welcome-section img {
+    width: 180px; /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #welcome-section img {
+        width: 120px; /* Smaller on mobile */
+    }
+}
+
+#welcome-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+/* About Section */
+#about {
+    background: var(--secondary-color);
+    color: var(--dominant-color);
+}
+
+#about p {
+    font-size: 1.2em;
+}
+
+/* Projects Section */
+#projects {
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    justify-content: center; /* Centers all project tiles */
+    gap: 20px; /* Space between projects */
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+
+.project-tile:hover {
+    transform: scale(1.05);
+}
+
+/* Project Tiles */
+.project-tile {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px; /* Ensures all tiles are the same width */
+    height: 400px; /* Ensures all tiles have the same height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is evenly distributed */
+}
+.project-tile a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--dominant-color);
+    color: var(--secondary-color);
+}
+
+#profile-link {
+    display: inline-block;
+}
+
+/* Certification Image */
+.certification-img {
+    width: 100%; /* Adjust size */
+    max-width: 300px; /* Keeps it responsive */
+    display: block;
+    margin: 10px auto; /* Centers the image */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a professional look */
+}
+/* Resume Section */
+#resume {
+    background: rgba(12, 35, 64, 0.9); /* Darker navy blue for subtle contrast */
+    padding: 60px 10%;
+    width: 100%;
+    text-align: left;
+}
+
+/* Resume Heading */
+#resume h2 {
+    font-size: 2.5em;
+    color: var(--highlight-color); /* Gold to make it stand out */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Resume Subheadings */
+#resume h3 {
+    font-size: 1.6em;
+    color: #f8e1a1; /* Lighter gold tone */
+    margin-top: 30px;
+    border-bottom: 3px solid var(--highlight-color);
+    padding-bottom: 8px;
+}
+
+/* Resume Paragraphs */
+#resume p {
+    font-size: 1.2em;
+    color: white;
+    margin: 10px 0;
+}
+
+/* Highlight Strong Elements */
+#resume p strong {
+    color: var(--highlight-color);
+}
+
+/* Links Styling */
+#resume a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#resume a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #resume {
+        padding: 40px 5%;
+    }
+
+    #resume h2 {
+        font-size: 2em;
+    }
+
+    #resume h3 {
+        font-size: 1.4em;
+    }
+
+    #resume p {
+        font-size: 1.1em;
+    }
+    .projects-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center;
+    }
+    .project-tile {
+        width: 90%; /* Make tiles take most of the screen width on small screens */
+        height: auto; /* Adjust height dynamically */
+    }
+}
